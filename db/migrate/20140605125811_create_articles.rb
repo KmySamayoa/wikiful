@@ -1,8 +1,9 @@
 class CreateArticles < ActiveRecord::Migration
   def change
-    create_table :article_categories do |t|
-        t.belongs_to :article
-        t.belongs_to :category
+    create_table :articles do |t|
+      t.string :title
+      t.text :content
+
       t.timestamps
     end
   end
