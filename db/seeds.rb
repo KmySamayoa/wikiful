@@ -16,6 +16,7 @@ title = Faker::Lorem.sentence(rand(2..10)).chomp('.')
 content = Faker::Lorem.paragraph(word_count=250)
 
 # randomly assign one of the categories we just created
-category = Category.first(offset: rand(Category.count))
+ random_category = rand(Category.count)
+ category = Category.offset(random_category).first
 a = Article.create(title: title, content: content, categories: [category,])
 end
