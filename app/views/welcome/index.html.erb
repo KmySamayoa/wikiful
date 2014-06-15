@@ -1,8 +1,9 @@
-<p class="lead">Welcome to Wikiful. Check out our 5 most recent articles</p>
+<h1>Welcome to Wikiful</h1>
+<p class="lead">Check out our 5 most recent articles.</p>
 <div class="articles">
-	<% @recent_articles.each do |article| %>
+  <% @recent_articles.each do |article| %>
 	  <h2>
-	  	<%= link_to article.title, article %>
+      <%= link_to article.title, article %>
 </h2>
 	  <div class="article-info">
 		Published <%= article.created_at.strftime('%b %d, %Y') %> |

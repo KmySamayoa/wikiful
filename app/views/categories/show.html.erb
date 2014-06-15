@@ -1,4 +1,4 @@
-<h1><%= @category.name %> Articles</h1>
+<h2><%= @category.name %> Articles</h2>
 <h3>There are <%= @category.articles.count %> articles filed under <%= @category.name %></h3>
 <ul>
 	<% @category.articles.order(:title).each do |article| %>
