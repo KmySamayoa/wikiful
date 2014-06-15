@@ -31,7 +31,7 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="span9"></div>
+    <div class="span9"><%= yield %></div>
      <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, id: "flash_#{name}" %>
     <% end %>
